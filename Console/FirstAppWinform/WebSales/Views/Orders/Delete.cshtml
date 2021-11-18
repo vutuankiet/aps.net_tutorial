@@ -1,64 +1,68 @@
 ﻿@model WebSales.Models.EF.Order
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Order</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderDate)
-        </dt>
+<div class="card shadow container col-12 col-md-6">
+    <div class="card-body">
+        <h2>Chinh sua</h2>
+        <h4>Loai san pham</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            <label class="control-label">CustomerID</label>
+            @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+            <div class="invalid-feedback">Example invalid feedback text</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.OrderDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Amount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Amount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Customer.Password)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
         </div>
-    }
+
+        <div class="form-group">
+            <label class="control-label">Address</label>
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            <div class="invalid-feedback">Example invalid feedback text</div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">OrderDate</label>
+            @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Amount</label>
+            @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Description</label>
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
 </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+

@@ -8,11 +8,11 @@ namespace WebSales.Models.DAO
 {
     public class BaseDAO
     {
-        protected T3H_K34_L1_DemoEntities1 _context;
+        protected T3H_K34_L1_DemoEntities2 _context;
 
         public BaseDAO()
         {
-            _context = new T3H_K34_L1_DemoEntities1();
+            _context = new T3H_K34_L1_DemoEntities2();
         }
     }
 }

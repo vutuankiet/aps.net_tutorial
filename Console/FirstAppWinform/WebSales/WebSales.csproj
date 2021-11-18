@@ -209,6 +209,10 @@
     <Compile Include="Models\EF\TableDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EF\Validation\Category.cs" />
+    <Compile Include="Models\EF\Validation\Customer.cs" />
+    <Compile Include="Models\EF\Validation\Order.cs" />
+    <Compile Include="Models\EF\Validation\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

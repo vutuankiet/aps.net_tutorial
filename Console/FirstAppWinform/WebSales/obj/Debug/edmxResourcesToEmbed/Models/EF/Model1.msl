@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="T3H_K34_L1_DemoModelStoreContainer" CdmEntityContainer="T3H_K34_L1_DemoEntities1">
+  <EntityContainerMapping StorageEntityContainer="T3H_K34_L1_DemoModelStoreContainer" CdmEntityContainer="T3H_K34_L1_DemoEntities2">
     <EntitySetMapping Name="Categories">
       <EntityTypeMapping TypeName="T3H_K34_L1_DemoModel.Category">
         <MappingFragment StoreEntitySet="Categories">

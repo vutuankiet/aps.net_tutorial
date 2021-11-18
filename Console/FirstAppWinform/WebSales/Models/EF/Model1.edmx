@@ -605,7 +605,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="T3H_K34_L1_DemoEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="T3H_K34_L1_DemoEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Events" EntityType="Self.Event" />
@@ -667,7 +667,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="T3H_K34_L1_DemoModelStoreContainer" CdmEntityContainer="T3H_K34_L1_DemoEntities1">
+        <EntityContainerMapping StorageEntityContainer="T3H_K34_L1_DemoModelStoreContainer" CdmEntityContainer="T3H_K34_L1_DemoEntities2">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="T3H_K34_L1_DemoModel.Category">
               <MappingFragment StoreEntitySet="Categories">

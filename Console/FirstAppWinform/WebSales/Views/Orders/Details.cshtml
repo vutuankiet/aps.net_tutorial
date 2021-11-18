@@ -1,58 +1,61 @@
 ﻿@model WebSales.Models.EF.Order
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Order</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderDate)
-        </dt>
+<div class="card shadow container col-12 col-md-6">
+    <div class="card-body">
+        <h2>Chinh sua</h2>
+        <h4>Order</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            <label class="control-label">CustomerID</label>
+            @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+            <div class="invalid-feedback">Example invalid feedback text</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.OrderDate)
-        </dd>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+        <div class="form-group">
+            <label class="control-label">Address</label>
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            <div class="invalid-feedback">Example invalid feedback text</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Amount)
-        </dt>
+        <div class="form-group">
+            <label class="control-label">OrderDate</label>
+            @Html.EditorFor(model => model.OrderDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.OrderDate, "", new { @class = "text-danger" })
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Amount)
-        </dd>
+        <div class="form-group">
+            <label class="control-label">Amount</label>
+            @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+        <div class="form-group">
+            <label class="control-label">Description</label>
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Customer.Password)
-        </dd>
-
-    </dl>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 p-0">
+                @Html.ActionLink("Chinh sua", "Edit", new { id = Model.ID }, htmlAttributes: new { @class = "btn btn-outline-warning" })
+                @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-outline-dark" })
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

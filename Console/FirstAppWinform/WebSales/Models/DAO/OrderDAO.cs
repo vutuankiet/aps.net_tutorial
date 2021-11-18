@@ -61,7 +61,7 @@ namespace WebSales.Models.DAO
         public async Task<List<Order>> GetByKeyword(string keyword)
         {
             List<Order> orders = await _context.Orders
-                .Where(t => t.CustomerID.Contains(keyword))
+                .Where(t => t.Address.Contains(keyword))
                 .ToListAsync();
 
             return orders;

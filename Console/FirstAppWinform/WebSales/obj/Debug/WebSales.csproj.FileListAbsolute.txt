@@ -84,6 +84,5 @@ D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\bin\Antlr3.Runtime.pdb
 D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\obj\Debug\WebSales.csproj.AssemblyReference.cache
 D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\obj\Debug\WebSales.csproj.CoreCompileInputs.cache
-D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\obj\Debug\WebSales.csproj.CopyComplete
 D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\obj\Debug\WebSales.dll
 D:\C#\aps.net_tutorial\Console\FirstAppWinform\WebSales\obj\Debug\WebSales.pdb

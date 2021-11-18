@@ -13,10 +13,10 @@ namespace WebSales.Models.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class T3H_K34_L1_DemoEntities1 : DbContext
+    public partial class T3H_K34_L1_DemoEntities2 : DbContext
     {
-        public T3H_K34_L1_DemoEntities1()
-            : base("name=T3H_K34_L1_DemoEntities1")
+        public T3H_K34_L1_DemoEntities2()
+            : base("name=T3H_K34_L1_DemoEntities2")
         {
         }
     

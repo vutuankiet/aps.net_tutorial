@@ -46,7 +46,7 @@ namespace WebSales.Controllers
         // GET: Orders/Create
         public async Task<ActionResult> Create()
         {
-            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "Password");
+            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "ID");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace WebSales.Controllers
                 }
             }
 
-            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "Password", order.CustomerID);
+            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "ID", order.CustomerID);
             return View(order);
         }
 
@@ -81,7 +81,7 @@ namespace WebSales.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "Password", order.CustomerID);
+            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "ID", order.CustomerID);
             return View(order);
         }
 
@@ -99,7 +99,7 @@ namespace WebSales.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "Password", order.CustomerID);
+            ViewBag.CustomerID = new SelectList(await new CustomerDAO().GetAll(), "ID", "ID", order.CustomerID);
             return View(order);
         }
 
@@ -129,11 +129,7 @@ namespace WebSales.Controllers
             }
 
             Order order = await dao.GetSingleByID((int)id);
-            if (order == null)
-            {
-                return HttpNotFound();
-            }
-            return View(order);
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

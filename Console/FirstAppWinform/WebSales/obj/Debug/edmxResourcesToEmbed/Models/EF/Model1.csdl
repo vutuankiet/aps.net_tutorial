@@ -280,7 +280,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="T3H_K34_L1_DemoEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="T3H_K34_L1_DemoEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Categories" EntityType="Self.Category" />
     <EntitySet Name="Customers" EntityType="Self.Customer" />
     <EntitySet Name="Events" EntityType="Self.Event" />
